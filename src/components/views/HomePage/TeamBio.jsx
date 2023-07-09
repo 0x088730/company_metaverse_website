@@ -1,7 +1,27 @@
 import bgImage from "../../../assets/image/backgroundimage/grey-texture-background.jpg";
 import threeHero from "../../../assets/image/backgroundimage/three_hero.png";
+import Slide from "react-reveal/Slide";
+import React, { useState, useEffect } from "react";
 
 const TeamBio = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setIsVisible(true);
+        console.log(window.scrollY);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div>
@@ -30,7 +50,11 @@ const TeamBio = () => {
             </div>
             <div className="rightSide">
               <div>
-                <img src={threeHero} alt="" className="threeHero"/>
+                {/* <div class="three-hero-image-container">
+                </div> */}
+                <Slide bottom when={isVisible}>
+                  <img src={threeHero} alt="" className="threeHero" />
+                </Slide>
               </div>
             </div>
           </div>

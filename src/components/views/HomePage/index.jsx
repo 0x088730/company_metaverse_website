@@ -3,6 +3,7 @@ import TeamBio from "./TeamBio.jsx";
 import MaskSection from "./MaskSection.jsx";
 import ImageAnimationEffect from "./ImageAnimationEffect";
 import LogoImage from "../../../assets/image/Logos/Logo2.png";
+// import Character from "../../../assets/image/backgroundimage/chracter.png";
 import "./homeStyle.scss";
 
 const HomeContainer = () => {
@@ -17,13 +18,13 @@ const HomeContainer = () => {
           backgroundRepeat: "no-repeat",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
-        <ImageAnimationEffect
-          src={LogoImage}
-          alt="Description of the image"
-        />
+        {/* <div class="three-hero-image-container">
+          <img src={Character} alt="" className="CharacterHero" />
+        </div> */}
+        <ImageAnimationEffect src={LogoImage} alt="Description of the image" />
       </div>
       <div>
         <TeamBio />

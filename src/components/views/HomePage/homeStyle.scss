@@ -1,6 +1,6 @@
 .parent-container {
   background-color: #000;
-  height: calc(100vh - 50px);
+  height: 100vh;
   max-height: 960px;
   min-height: 560px;
   flex: 1;
@@ -34,6 +34,9 @@
     width: 1005;
   }
 }
+.rightSide > div > img {
+  width: 100%;
+}
 
 .theTeam {
   color: #1d0e47;
@@ -58,7 +61,7 @@
 }
 
 
-.threeHero {
+.CharacterHero {
   width: 100%;
 }
 
@@ -66,11 +69,42 @@
   position: relative;
   display: inline-block;
   left: 23%;
+  @media (max-width: 1400px) {
+    left: 0%;
+  }
 }
 
 .image-container img {
   display: block;
-  width: 40rem;
+  width: 45rem;
   height: auto;
   transition: transform 0.3s ease-out;
+  @media (max-width: 762px) {
+    display: none;
+  }
+}
+
+
+.three-hero-image-container {
+  width: 49%;
+  overflow: hidden;
+  height: calc(100vh - 50px);
+  max-height: 960px;
+  min-height: 560px;
+}
+
+.three-hero-image-container img {
+  animation: slide 4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

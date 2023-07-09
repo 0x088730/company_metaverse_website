@@ -2,6 +2,9 @@
   display: flex;
   background-color: black;
   align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
   @media (max-width: 960px) {
     justify-content: center;
   }

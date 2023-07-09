@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { CSSPlugin } from "gsap/CSSPlugin";
-// import "./styles.css";
 
 gsap.registerPlugin(CSSPlugin);
 
