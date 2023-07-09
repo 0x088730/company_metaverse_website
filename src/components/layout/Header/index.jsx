@@ -1,4 +1,4 @@
-import Logo from '../../../assets/image/Logos/Logo1.png';
+import Logo from '../../../assets/image/Logos/Logo2.png';
 import "./style.scss";
 const Header = () => {
   return (

@@ -1,12 +1,13 @@
-import bgImage from '../../../assets/image/backgroundimage/bg.png'
-import TeamBio from './TeamBio.jsx';
-import MaskSection from './MaskSection.jsx';
-import CompanyLogo from './CompanyLogoGsap.jsx'
+import bgImage from "../../../assets/image/backgroundimage/bg.png";
+import TeamBio from "./TeamBio.jsx";
+import MaskSection from "./MaskSection.jsx";
+import ImageAnimationEffect from "./ImageAnimationEffect";
+import LogoImage from "../../../assets/image/Logos/Logo2.png";
 import "./homeStyle.scss";
 
 const HomeContainer = () => {
   return (
-    <div className='parent-container'>
+    <div className="parent-container">
       <div
         style={{
           backgroundImage: `url(${bgImage})`,
@@ -14,9 +15,15 @@ const HomeContainer = () => {
           backgroundSize: "cover",
           backgroundPosition: "initial",
           backgroundRepeat: "no-repeat",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
         }}
       >
-        
+        <ImageAnimationEffect
+          src={LogoImage}
+          alt="Description of the image"
+        />
       </div>
       <div>
         <TeamBio />
