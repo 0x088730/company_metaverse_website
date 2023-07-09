@@ -1,7 +1,19 @@
+import Logo from '../../../assets/image/Logos/Logo1.png';
+import "./style.scss";
 const Header = () => {
   return (
     <>
-      <h1></h1>
+    <div className='flexHeader'>
+      <div>
+        <img src={Logo} alt="" className='logo'/>
+      </div>
+      <div className="header">
+        <div>Who We Are</div>
+        <div>HYTALE</div>
+        <div>OUR TEAM</div>
+        <div>JOBS</div>
+      </div>
+    </div>
     </>
   )
 }

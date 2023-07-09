@@ -1,0 +1,63 @@
+.parent-container {
+  background-color: #000;
+  height: calc(100vh - 50px);
+  max-height: 960px;
+  min-height: 560px;
+  flex: 1;
+}
+
+.teamIntro {
+  display: flex;
+  justify-content: space-between;
+  padding: 7.15em 14.3em;
+  @media (max-width: 870px) {
+    display: block;
+    padding: 3.15em 10.3em;
+  }
+
+}
+
+.zoneBg {
+  width: 100%;
+}
+
+.leftSide {
+  width: 50%;
+  @media (max-width: 870px) {
+    width: 100%;
+  }
+}
+
+.rightSide {
+  width: 50%;
+  @media (max-width: 870px) {
+    width: 1005;
+  }
+}
+
+.theTeam {
+  color: #1d0e47;
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.homeSectionSubtitle {
+  color: #7a7463;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.homeSectionText {
+  line-height: 160%;
+    letter-spacing: .02em;
+    font-size: 1.05em;
+    font-weight: 400;
+    margin: 0.8em 0;
+    color: #060707;
+}
+
+
+.threeHero {
+  width: 100%;
+}
