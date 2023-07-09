@@ -12,6 +12,7 @@
 
 .header {
   display: flex;
+  font-family: "Open Sans",sans-serif;
   @media (max-width: 960px) {
     display: none;
   }

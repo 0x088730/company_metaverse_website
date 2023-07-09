@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
+
 import HomeContainer from './components/views/HomePage';
 
 const RouterComponent = () => (
@@ -14,6 +15,7 @@ const RouterComponent = () => (
           </Routes>
         </div>
       </main>
+      {/* <Footer /> */}
     </div>
   </Router>
 );

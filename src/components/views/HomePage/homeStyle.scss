@@ -14,11 +14,94 @@
     display: block;
     padding: 3.15em 10.3em;
   }
+}
 
+.jobIntro {
+  display: flex;
+  justify-content: space-between;
+  padding: 7.15em 14.3em;
+  margin-top: -70px;
+  @media (max-width: 870px) {
+    display: block;
+    padding: 3.15em 10.3em;
+  }
+}
+
+.masked-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 980px;
+  background: linear-gradient(
+    to bottom,
+    #040404,
+    #000000
+  ); /* Replace with your desired gradient */
+  opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+.maskedSectionBio {
+  position: relative;
+  top: -80vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 14rem;
+  @media (max-width: 1672px) {
+        padding: 3rem 3rem;
+        flex-direction: column;
+  }
+}
+
+.rightMaskedSection {
+  width: 50%;
+  @media (max-width:1670px) {
+    width: 100%;
+  }
+}
+
+.leftMaskedSection {
+  width: 50%;
+  @media (max-width:1670px) {
+    width: 100%;
+  }
+}
+
+.companyTxtStyle {
+  color: #9896ae;
+  font-size: 4rem;
+  padding-bottom: 0.1em;
+  font-weight: 800;
+  margin: 0;
+  text-align: left;
+  position: relative;
+  background: linear-gradient(#ffe98d, #e19f27);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 100% 98%;
+  background-position: 50%;
+}
+
+.companyPTxtStyle {
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  font-size: 1.05em;
+  font-weight: 400;
+  margin: 0.8em 0;
+  margin-top: 1em;
+  color: #cacaca;
+}
+
+#myDiv {
+  max-width: 500px; /* Change the width as needed */
+  overflow-x: hidden;
+  transition: width 2s ease 1s;
 }
 
 .zoneBg {
   width: 100%;
+  height: 980px;
 }
 
 .leftSide {
@@ -43,23 +126,25 @@
   font-size: 4rem;
   font-weight: 800;
   margin: 0;
+  font-family: "Open Sans",sans-serif;
 }
 
 .homeSectionSubtitle {
   color: #7a7463;
   font-size: 1.5em;
   font-weight: 700;
+  font-family: "Open Sans",sans-serif;
 }
 
 .homeSectionText {
   line-height: 160%;
-    letter-spacing: .02em;
-    font-size: 1.05em;
-    font-weight: 400;
-    margin: 0.8em 0;
-    color: #060707;
+  letter-spacing: 0.02em;
+  font-size: 1.05em;
+  font-weight: 400;
+  margin: 0.8em 0;
+  color: #060707;
+  font-family: "Open Sans",sans-serif;
 }
-
 
 .CharacterHero {
   width: 100%;
@@ -84,7 +169,6 @@
   }
 }
 
-
 .three-hero-image-container {
   width: 49%;
   overflow: hidden;
@@ -94,7 +178,7 @@
 }
 
 .three-hero-image-container img {
-  animation: slide 4s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+  animation: slide 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes slide {

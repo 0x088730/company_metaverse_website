@@ -1,0 +1,49 @@
+.footerStyleSection {
+  background: radial-gradient(circle, #19162b 0, #19162b 14%, #0c0818 50%);
+  height: 350px;
+  bottom: 0;
+  margin-top: -20px;
+}
+
+.footerStyleHrSection {
+  width: 100%;
+  height: 1px;
+  background-color: #322d45;
+  position: relative;
+  top: -340px;
+}
+
+.bottonLogo {
+  width: 200px;
+}
+
+.logoPos {
+  display: flex;
+  justify-content: center;
+}
+
+.logoSection {
+  align-items: center;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footerMenu {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  color: #9896ae;
+  margin-top: 30px;
+}
+
+.footerMenu > div {
+  border-right: 1px solid #9896ae;
+  padding: 1px 10px;
+  font-size: 20px;
+}
+.footerMenu > div:last-child {
+  border: 0;
+}

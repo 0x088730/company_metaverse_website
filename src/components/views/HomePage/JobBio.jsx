@@ -1,9 +1,9 @@
 import bgImage from "../../../assets/image/backgroundimage/grey-texture-background.jpg";
-import threeHero from "../../../assets/image/backgroundimage/three_hero.png";
+import threeHero from "../../../assets/image/backgroundimage/monster_hero.png";
 import Slide from "react-reveal/Slide";
 import React, { useState, useEffect } from "react";
 
-const TeamBio = () => {
+const JobBio = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -34,18 +34,19 @@ const TeamBio = () => {
             height: "auto",
           }}
         >
-          <div className="teamIntro">
+          <div className="jobIntro">
             <div className="leftSide">
-              <div className="theTeam">The Team</div>
-              <div className="homeSectionSubtitle">Find out who we are</div>
+              <div className="theTeam">Jobs</div>
+              <div className="homeSectionSubtitle">Join the team</div>
               <div className="homeSectionText">
-                We are a team of passionate, self-driven game developers from a
-                diverse set of backgrounds. The Hypixel Studios team is a mix of
-                modders, indies and industry veterans committed to the goal of
-                creating the world’s most empowered gaming communities. Although
-                the company is headquartered in Derry~Londonderry, Northern
-                Ireland, we operate a remote-first model and our team members
-                contribute from all over the world.
+                We’re looking for applicants who are self-driven, put players
+                first, and that have a history of making cool stuff. In return,
+                we can offer the flexibility of remote working in an environment
+                that values and supports individual creativity and passion and
+                believes in fostering new talent. We recognize the value of
+                diversity in every sense and actively encourage candidates from
+                diverse backgrounds to apply. For more information and a list of
+                our current openings, please see the Jobs page.
               </div>
             </div>
             <div className="rightSide">
@@ -62,4 +63,4 @@ const TeamBio = () => {
   );
 };
 
-export default TeamBio;
+export default JobBio;
