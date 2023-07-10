@@ -50,7 +50,7 @@ const TeamBio = () => {
             </div>
             <div className="rightSide">
               <div>
-                <Slide bottom when={isVisible}>
+                <Slide bottom>
                   <img src={threeHero} alt="" className="threeHero" />
                 </Slide>
               </div>

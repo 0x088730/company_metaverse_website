@@ -1,9 +1,10 @@
 .parent-container {
   background-color: #000;
   height: 100vh;
-  max-height: 960px;
+  max-height: 100vh;
   min-height: 560px;
   flex: 1;
+  overflow-y: scroll;
 }
 
 .teamIntro {

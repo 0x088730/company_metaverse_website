@@ -13,6 +13,14 @@ const Header = () => {
         <div>OUR TEAM</div>
         <div>JOBS</div>
       </div>
+      <div>
+        <div>
+          SignUp
+        </div>
+        <div>
+          SignIn
+        </div>
+      </div>
     </div>
     </>
   )
