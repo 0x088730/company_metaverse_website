@@ -208,14 +208,14 @@
 }
 
 .modal {
-  background-color: white;
+  background-color: #181a21;
   border-radius: 5px;
-  padding: 20px;
+  padding: 50px 32px;
   position: relative;
   max-width: 80%;
   max-height: 80%;
   overflow: auto;
-  width: 50vw;
+  width: 25vw;
   height: 50vh;
 }
 
@@ -232,4 +232,37 @@
 .modal h1 {
   font-size: 24px;
   margin-top: 0;
+}
+
+.signInTitle {
+  color: #1999ff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.signInBox {
+  margin-top: 30px;
+}
+
+.white-outline .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: white;
+}
+
+.MuiInput-underline:after {
+  border-bottom: 1px solid #1999ff!important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #1999ff!important;
+}
+
+.loginBtnStyle {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.helpIssue {
+  color: white;
 }

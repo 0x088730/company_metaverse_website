@@ -1,18 +1,90 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { closeModal } from '../../../redux/actions/modalActions';
+import Box from "@mui/material/Box";
+import { connect } from "react-redux";
+import React, { useEffect } from "react";
+import { TextField, IconButton } from "@material-ui/core";
+import { closeModal } from "../../../redux/actions/modalActions";
+import CloseIcon from "@mui/icons-material/Close";
+import { Button, makeStyles } from "@material-ui/core";
+import QRCode from "../../../assets/image/SNGOUT2056.jpg";
 
+const useStyles = makeStyles((theme) => ({
+  customButton: {
+    backgroundColor: "#1999ff",
+    width: '250px',
+    color: "#fff",
+    "&:hover": {
+      backgroundColor: "#1999ff",
+    },
+  },
+}));
 const Modal = ({ isOpen, closeModal, children }) => {
+  const classes = useStyles();
   useEffect(() => {
-    console.log(isOpen)
-  },[])
+    console.log(isOpen);
+  }, []);
   return (
     <>
       {isOpen && (
         <div className="modal-overlay">
           <div className="modal">
-            <button className="modal-close" onClick={closeModal}>Close</button>
+            <div className="modal-close">
+              <IconButton
+                aria-label="delete"
+                onClick={closeModal}
+                style={{ color: "#1999ff" }}
+              >
+                <CloseIcon />
+              </IconButton>
+            </div>
             {children}
+            <div>
+              <div>
+                <div className="signInTitle">SIGN IN</div>
+                <div className="signInBox">
+                  <Box
+                    sx={{
+                      width: 500,
+                      maxWidth: "100%",
+                    }}
+                  >
+                    <TextField
+                      fullWidth
+                      label="Email"
+                      id="fullWidth"
+                      color="primary"
+                      focused
+                      InputProps={{
+                        style: { color: "white" },
+                      }}
+                    />
+                    <br />
+                    <br />
+                    <TextField
+                      fullWidth
+                      label="Password"
+                      id="fullWidth"
+                      color="primary"
+                      focused
+                      InputProps={{
+                        style: { color: "white" },
+                      }}
+                    />
+                  </Box>
+                  <div className="loginBtnStyle">
+                    <Button
+                      variant="contained"
+                      className={classes.customButton}
+                    >
+                      Login
+                    </Button>
+                  </div>
+                  <div className="loginBtnStyle">
+                      {/* <a></a> */}
+                      <a href="http://" className="helpIssue">Help, I can't sign in</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -20,7 +92,7 @@ const Modal = ({ isOpen, closeModal, children }) => {
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   isOpen: state.modal.isOpen,
 });
 

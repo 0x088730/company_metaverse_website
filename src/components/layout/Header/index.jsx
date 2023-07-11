@@ -1,4 +1,4 @@
-import Logo from "../../../assets/image/Logos/Logo2.png";
+import Logo from "../../../assets/image/Logos/logoIcon.png";
 import { connect } from 'react-redux';
 import { openModal } from '../../../redux/actions/modalActions';
 import "./style.scss";
