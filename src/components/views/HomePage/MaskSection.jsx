@@ -14,7 +14,7 @@ const MaskSection = () => {
             height: "980px",
           }}
         >
-          <img src={bgImage} className="zoneBg" />
+          <img src={bgImage} className="zoneBg" alt="zoneBg"/>
         </div>
         <div style={{height: 0}}>
           <div className="maskedSectionBio">

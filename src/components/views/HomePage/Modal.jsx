@@ -1,11 +1,10 @@
 import Box from "@mui/material/Box";
 import { connect } from "react-redux";
-import React, { useEffect } from "react";
+import React from "react";
 import { TextField, IconButton } from "@material-ui/core";
 import { closeModal } from "../../../redux/actions/modalActions";
 import CloseIcon from "@mui/icons-material/Close";
 import { Button, makeStyles } from "@material-ui/core";
-import QRCode from "../../../assets/image/SNGOUT2056.jpg";
 
 const useStyles = makeStyles((theme) => ({
   customButton: {
@@ -19,9 +18,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Modal = ({ isOpen, closeModal, children }) => {
   const classes = useStyles();
-  useEffect(() => {
-    console.log(isOpen);
-  }, []);
   return (
     <>
       {isOpen && (

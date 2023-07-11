@@ -4,7 +4,7 @@ import Slide from "react-reveal/Slide";
 import React, { useState, useEffect } from "react";
 
 const TeamBio = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
