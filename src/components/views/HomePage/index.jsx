@@ -8,6 +8,7 @@ import Footer from '../../layout/Footer'
 import TextEmphasis from './TextEmphasis';
 // import Character from "../../../assets/image/backgroundimage/chracter.png";
 import "./homeStyle.scss";
+import Modal from "./Modal";
 
 const HomeContainer = () => {
   return (
@@ -31,6 +32,7 @@ const HomeContainer = () => {
         <TextEmphasis />
       </div>
       <div>
+        <Modal />
         <TeamBio />
         <MaskSection />
         <JobBio />

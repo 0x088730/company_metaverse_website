@@ -6,6 +6,7 @@
   width: 100%;
   z-index: 9999;
   border-bottom: 0.1rem solid #bc191a;
+  justify-content: space-between;
   @media (max-width: 960px) {
     justify-content: center;
   }
