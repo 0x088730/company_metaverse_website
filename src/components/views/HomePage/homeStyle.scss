@@ -216,7 +216,7 @@
   max-height: 80%;
   overflow: auto;
   width: 25vw;
-  height: 50vh;
+  height: 60%;
 }
 
 .modal-close {
@@ -235,7 +235,7 @@
 }
 
 .signInTitle {
-  color: #1999ff;
+  color: #64b1f8;
   font-size: 20px;
   font-weight: 700;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -250,11 +250,14 @@
 }
 
 .MuiInput-underline:after {
-  border-bottom: 1px solid #1999ff!important;
+  border-bottom: 1px solid #64b1f8!important;
 }
 
 .MuiFormLabel-root.Mui-focused {
-  color: #1999ff!important;
+  color: #64b1f8!important;
+}
+.makeStyles-customButton-2 {
+  background-color: #64b1f8!important;
 }
 
 .loginBtnStyle {
@@ -267,17 +270,12 @@
   color: white;
 }
 
-.btn {
-  width: 120px;
-  height: 20px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  margin: 30px auto;
 
+.googleImg {
+  width: 45px;
+  height: auto;
 }
+
 .login {
   background-color: #91c6f8;
 }
@@ -291,6 +289,22 @@
   background-color: #fad459;
 }
 .container {
-  width: 50%;
+  width: 100%!important;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+}
+
+.userProfileStyle > h1, h2 {
+  color: white;
+}
+
+.userProfileStyle > img {
+  border-radius: 100%;
+}
+
+.modalFlexDirection {
+  display: flex;
+    flex-direction: column;
+    gap: 5vh;
 }

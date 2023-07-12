@@ -5,9 +5,9 @@ export const UserCard = (props) => {
     
   })
   return (
-    <div>
-      <h2>{props.user.name}</h2>
-      <h1>{props.user.email}</h1>
+    <div className='userProfileStyle'>
+      <h2>Name: {props.user.name}</h2>
+      <h1>Email: {props.user.email}</h1>
       <img src={props.user.profileImg} alt="user profile" />
     </div>
   );

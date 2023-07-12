@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { gapi, loadAuth2 } from 'gapi-script'
-import { Auth } from '../../../redux/actions/userActions'
+import {connect, useDispatch} from 'react-redux'
 import { UserCard } from './UserCard';
-import { connect } from 'react-redux';
+import {Auth} from "../../../redux/actions/userActions";
+import Google from "../../../assets/image/backgroundimage/search.png"
+import Linkedin from "../../../assets/image/backgroundimage/linkedin.png"
+import FaceBook from "../../../assets/image/backgroundimage/facebook.png"
 import './GoogleLogin.css';
 
-const GoogleLogin  = () => {
+const GoogleLogin  = (props) => {
+  console.log(props)
   const [user, setUser] = useState(null);
-
+  const dispatch = useDispatch()
   useEffect(() => {
     const setAuth2 = async () => {
       const auth2 = await loadAuth2(gapi, "44599695390-gup6helb1r9diigcs629dvp14dal92e9.apps.googleusercontent.com", '')
@@ -36,17 +40,17 @@ const GoogleLogin  = () => {
     const profileImg = currentUser.getBasicProfile().getImageUrl();
     const profileEmail = currentUser.getBasicProfile().getEmail();
     const userInfo = {
-      userName: name,
-      userEmail: profileEmail,
-      userImg: profileImg
+      name: name,
+      profileImg: profileImg,
+      email: profileEmail
     }
-    Auth(userInfo);
+    dispatch(Auth(userInfo));
+    console.log(userInfo)
     setUser({
       name: name,
       profileImg: profileImg,
       email: profileEmail
     });
-
   };
 
 
@@ -82,19 +86,24 @@ const GoogleLogin  = () => {
   return (
     <div className="container">
       <div id="customBtn" className="btn login">
-        Login
+        <img src={Google} alt="" className='googleImg'/>
+      </div>
+      <div id="customBtn" className="btn login">
+        <img src={Linkedin} alt="" className='googleImg'/>
+      </div>
+      <div id="customBtn" className="btn login">
+        <img src={FaceBook} alt="" className='googleImg'/>
       </div>
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  inputValue: state.inputValue,
-});
+  auth: state.auth
+})
 
 const mapDispatchToProps = {
-  Auth,
-};
-
+  Auth
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(GoogleLogin);

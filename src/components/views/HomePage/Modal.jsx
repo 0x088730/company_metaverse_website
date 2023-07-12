@@ -6,7 +6,7 @@ import { closeModal } from "../../../redux/actions/modalActions";
 import CloseIcon from "@mui/icons-material/Close";
 import { Button, makeStyles } from "@material-ui/core";
 // import { gapi } from "gapi-script";
-import GoogleLogin from './GoogleLogin';
+import GoogleLogin from "./GoogleLogin";
 
 const useStyles = makeStyles((theme) => ({
   customButton: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-const Modal = ({ isOpen, closeModal, children }) => {
+const Modal = ({ isOpen, closeModal, children, auth }) => {
   const classes = useStyles();
 
   return (
@@ -37,54 +37,55 @@ const Modal = ({ isOpen, closeModal, children }) => {
             </div>
             {children}
             <div>
-              <div>
-                <div className="signInTitle">SIGN IN</div>
-                <div className="signInBox">
-                  <Box
-                    sx={{
-                      width: 500,
-                      maxWidth: "100%",
-                    }}
-                  >
-                    <TextField
-                      fullWidth
-                      label="Email"
-                      id="fullWidth"
-                      color="primary"
-                      focused
-                      InputProps={{
-                        style: { color: "white" },
+              <div className="modalFlexDirection"><div>
+                  <div className="signInTitle">SIGN IN</div>
+                  <div className="signInBox">
+                    <Box
+                      sx={{
+                        width: 500,
+                        maxWidth: "100%",
                       }}
-                    />
-                    <br />
-                    <br />
-                    <TextField
-                      fullWidth
-                      label="Password"
-                      id="fullWidth"
-                      color="primary"
-                      focused
-                      InputProps={{
-                        style: { color: "white" },
-                      }}
-                    />
-                  </Box>
-                  <div className="loginBtnStyle">
-                    <Button
-                      variant="contained"
-                      className={classes.customButton}
                     >
-                      Login
-                    </Button>
+                      <TextField
+                        fullWidth
+                        label="Email"
+                        id="fullWidth"
+                        color="primary"
+                        focused
+                        InputProps={{
+                          style: { color: "white" },
+                        }}
+                      />
+                      <br />
+                      <br />
+                      <TextField
+                        fullWidth
+                        label="Password"
+                        id="fullWidth"
+                        color="primary"
+                        focused
+                        InputProps={{
+                          style: { color: "white" },
+                        }}
+                      />
+                    </Box>
+                    <div className="loginBtnStyle">
+                      <Button
+                        variant="contained"
+                        className={classes.customButton}
+                      >
+                        Login
+                      </Button>
+                    </div>
+                    <div className="loginBtnStyle">
+                      {/* <a></a> */}
+                      <a href="http://" className="helpIssue">
+                        Help, I can't sign in
+                      </a>
+                    </div>
                   </div>
-                  <div className="loginBtnStyle">
-                    {/* <a></a> */}
-                    <a href="http://" className="helpIssue">
-                      Help, I can't sign in
-                    </a>
-                  </div>
-                  <GoogleLogin />
-                </div>
+                </div> 
+                <GoogleLogin />
               </div>
             </div>
           </div>
@@ -96,6 +97,7 @@ const Modal = ({ isOpen, closeModal, children }) => {
 
 const mapStateToProps = (state) => ({
   isOpen: state.modal.isOpen,
+  auth: state.auth.name,
 });
 
 const mapDispatchToProps = {

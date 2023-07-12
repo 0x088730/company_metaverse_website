@@ -1,9 +1,9 @@
 export const AUTH = "AUTHENTICATION";
 export const AUTHLOGOUT = "AUTHORLOGOUT"
 
-export const Auth = (payload) => ({
+export const Auth = (userInfo) => ({
   type: AUTH,
-  auth: payload
+  payload: userInfo 
 })
 
 export const AuthLogout = (payload) => ({

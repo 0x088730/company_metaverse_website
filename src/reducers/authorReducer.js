@@ -7,10 +7,10 @@ const initialState = {
 const authorReducer = (state = initialState, action) => {
   switch (action.type) {
     case AUTH:
-      return {
-        ...state,
-        auth: action.payload,
-      };
+        return {
+          ...state,
+          auth: action.payload,
+        };
     case AUTHLOGOUT:
       return {
         ...state,

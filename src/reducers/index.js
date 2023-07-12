@@ -4,7 +4,7 @@ import authorReducer from './authorReducer';
 import homeReducer from './homeReducer';
 
 export default combineReducers({
-  authorState: authorReducer,
+  auth: authorReducer,
   modal: modalReducer,
   homeState: homeReducer,
 });
