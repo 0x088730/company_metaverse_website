@@ -59,7 +59,7 @@ function HomeContainer() {
         {/* <div class="three-hero-image-container">
           <img src={Character} alt="" className="CharacterHero" />
         </div> */}
-        <div style={{ width: "50%" }}>
+        <div className="characterPos">
           <Canvas style={{height: '969px'}}>
             <ambientLight />
             <pointLight position={[10, 10, 10]} />

@@ -2,6 +2,7 @@ import bgImage from "../../../assets/image/backgroundimage/zoneImage.jpg";
 import maskImage from "../../../assets/image/backgroundimage/mask_bg.png";
 
 const MaskSection = () => {
+  const mobileMediaQuery = '@media (max-width: 360px) and (max-width: 450px)';
   return (
     <>
       <div>
@@ -12,6 +13,9 @@ const MaskSection = () => {
             WebkitMaskImage: `url(${maskImage})`,
             marginTop: "-90px",
             height: "980px",
+            [mobileMediaQuery]: {
+              height: "85vw"
+            }
           }}
         >
           <img src={bgImage} className="zoneBg" alt="zoneBg"/>

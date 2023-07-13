@@ -3,20 +3,18 @@
   background-color: black;
   align-items: center;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 9999;
   border-bottom: 0.1rem solid #bc191a;
   justify-content: space-between;
-  @media (max-width: 960px) {
-    justify-content: center;
-  }
 }
 
 .header {
   display: flex;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   @media (max-width: 960px) {
-    display: none;
+    // display: none;
   }
 }
 
@@ -24,7 +22,7 @@
   color: #cacaca;
   padding: 20px;
   font-size: 1.1em;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   font-weight: bolder;
   text-transform: uppercase;
   @media (max-width: 768px) {
@@ -47,4 +45,76 @@
     width: 100px;
     padding: 10px 20px;
   }
+  @media (min-width: 360px) and (max-width: 450px) {
+    width: 40px;
+  }
 }
+
+.logoPos {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.topnav button:not(:first-child) {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 24px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  
+}
+
+.topnav button:hover:not(:first-child) {
+  background-color: #ddd!important;
+  color: black!important;
+}
+
+.topnav button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/* Add your responsive styles here */
+@media screen and (max-width: 600px) {
+  .topnav button:not(:first-child) {
+    display: none;
+  }
+
+  .topnav button.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .topnav.responsive button {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+}
+
+

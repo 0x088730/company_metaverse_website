@@ -17,7 +17,7 @@
   width: 200px;
 }
 
-.logoPos {
+.footerLogoPos {
   display: flex;
   justify-content: center;
 }
@@ -43,6 +43,9 @@
   border-right: 1px solid #9896ae;
   padding: 1px 10px;
   font-size: 20px;
+  @media (min-width: 360px) and (max-width: 450px) {
+    font-size: 10px;
+  }
 }
 .footerMenu > div:last-child {
   border: 0;

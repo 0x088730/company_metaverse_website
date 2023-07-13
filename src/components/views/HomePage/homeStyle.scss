@@ -7,6 +7,13 @@
   overflow-y: scroll;
 }
 
+.characterPos {
+  width: 50%;
+  @media (min-width: 360px) and (max-width: 450px) {
+    width: 100%;
+  }
+}
+
 .teamIntro {
   display: flex;
   justify-content: space-between;
@@ -14,6 +21,10 @@
   @media (max-width: 870px) {
     display: block;
     padding: 3.15em 10.3em;
+  }
+  @media (min-width: 360px) and (max-width: 450px) {
+    display: block;
+    padding: 1em 1em;
   }
 }
 
@@ -25,6 +36,11 @@
   @media (max-width: 870px) {
     display: block;
     padding: 3.15em 10.3em;
+  }
+  @media (min-width: 360px) and (max-width: 450px) {
+    display: block;
+    padding: 1em 1em;
+    margin: 0;
   }
 }
 
@@ -39,6 +55,13 @@
     #000000
   ); /* Replace with your desired gradient */
   opacity: 0.7; /* Adjust the opacity as needed */
+
+}
+
+.masked-image {
+  @media (min-width: 360px) and (max-width: 450px) {
+    height: 86vh!important;
+  }
 }
 
 .maskedSectionBio {
@@ -48,21 +71,21 @@
   justify-content: space-around;
   padding: 3rem 14rem;
   @media (max-width: 1672px) {
-        padding: 3rem 3rem;
-        flex-direction: column;
+    padding: 3rem 3rem;
+    flex-direction: column;
   }
 }
 
 .rightMaskedSection {
   width: 50%;
-  @media (max-width:1670px) {
+  @media (max-width: 1670px) {
     width: 100%;
   }
 }
 
 .leftMaskedSection {
   width: 50%;
-  @media (max-width:1670px) {
+  @media (max-width: 1670px) {
     width: 100%;
   }
 }
@@ -110,12 +133,18 @@
   @media (max-width: 870px) {
     width: 100%;
   }
+  @media (max-width: 360px) and (max-width: 450px) {
+    width: 100%;
+  }
 }
 
 .rightSide {
   width: 50%;
   @media (max-width: 870px) {
-    width: 1005;
+    width: 100%;
+  }
+  @media (min-width: 360px) and (max-width: 450px) {
+    width: 100%;
   }
 }
 .rightSide > div > img {
@@ -127,14 +156,14 @@
   font-size: 4rem;
   font-weight: 800;
   margin: 0;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .homeSectionSubtitle {
   color: #7a7463;
   font-size: 1.5em;
   font-weight: 700;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .homeSectionText {
@@ -144,7 +173,7 @@
   font-weight: 400;
   margin: 0.8em 0;
   color: #060707;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .CharacterHero {
@@ -194,7 +223,6 @@
   }
 }
 
-
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -205,6 +233,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999999;
 }
 
 .modal {
@@ -216,7 +245,10 @@
   max-height: 80%;
   overflow: auto;
   width: 25vw;
-  height: 60%;
+  height: 45%;
+  @media screen and (max-width: 600px) {
+    width: 65vw;
+  }
 }
 
 .modal-close {
@@ -238,38 +270,46 @@
   color: #64b1f8;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .signInBox {
   margin-top: 30px;
 }
 
-.white-outline .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+.white-outline
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
   border-color: white;
 }
 
 .MuiInput-underline:after {
-  border-bottom: 1px solid #64b1f8!important;
+  border-bottom: 1px solid white !important;
 }
 
 .MuiFormLabel-root.Mui-focused {
-  color: #64b1f8!important;
+  color:white!important;
 }
 .makeStyles-customButton-2 {
-  background-color: #64b1f8!important;
+  background-color: white !important;
 }
 
 .loginBtnStyle {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+}
+
+.lostPass {
+  color: white;
 }
 
 .helpIssue {
   color: white;
 }
 
+.aTagPos {
+  margin-left: 10px;
+}
 
 .googleImg {
   width: 45px;
@@ -289,13 +329,14 @@
   background-color: #fad459;
 }
 .container {
-  width: 100%!important;
+  width: 100% !important;
   margin: 0 auto;
   height: 100%;
   display: flex;
 }
 
-.userProfileStyle > h1, h2 {
+.userProfileStyle > h1,
+h2 {
   color: white;
 }
 
@@ -305,6 +346,61 @@
 
 .modalFlexDirection {
   display: flex;
-    flex-direction: column;
-    gap: 5vh;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.signInLogo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -30px;
+}
+
+.createName {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.flexPos {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  @media (max-width: 360px) {
+    gap: 1.8vh;
+  }
+}
+
+.checkRemember {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+//checkbox customize
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+  color: white!important;
+  padding: 0!important;
+}
+
+
+.css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input:not(
+    [multiple]
+  )
+  option,
+.css-19ygod6-MuiNativeSelect-select-MuiInputBase-input-MuiInput-input:not(
+    [multiple]
+  )
+  optgroup {
+  background-color: #181a21 !important;
+}
+
+
+.MuiInputBase-input {
+  color: white !important;
 }

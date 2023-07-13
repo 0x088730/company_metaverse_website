@@ -6,7 +6,7 @@ const Footer = () => {
     <>
       <div className="footerStyleSection">
         <div className="logoSection">
-          <div className="logoPos">
+          <div className="footerLogoPos">
             <img src={Logo} alt="" className="bottonLogo" />
           </div>
           <div className="footerMenu">

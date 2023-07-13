@@ -45,7 +45,7 @@ const GoogleLogin  = (props) => {
       email: profileEmail
     }
     dispatch(Auth(userInfo));
-    console.log(userInfo)
+    // console.log(userInfo)
     setUser({
       name: name,
       profileImg: profileImg,

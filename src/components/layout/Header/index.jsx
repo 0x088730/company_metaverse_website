@@ -1,29 +1,25 @@
-import Logo from "../../../assets/image/Logos/logoIcon.png";
-import { connect } from 'react-redux';
-import { openModal } from '../../../redux/actions/modalActions';
 import "./style.scss";
+import { useEffect } from "react";
+import TopNavBar from "./TopNavBar";
+import UserDashBar from "./UserDashBar";
+import { connect } from "react-redux";
+import { openModal } from "../../../redux/actions/modalActions";
 
-const Header = ({ openModal }) => {
+const Header = ({ auth,isAuthenticated }) => {
+  useEffect(() => {});
+  {console.log(auth)}
   return (
     <>
-      <div className="flexHeader">
-        <div>
-          <img src={Logo} alt="" className="logo" />
-        </div>
-        <div className="header">
-          <div>Who We Are</div>
-          <div>HYTALE</div>
-          <div>OUR TEAM</div>
-          <div>JOBS</div>
-          <div onClick={() => openModal(true)}>SignIn</div>
-        </div>
-      </div>
+    {
+      isAuthenticated ? <UserDashBar />: <TopNavBar /> 
+    }
     </>
   );
 };
 
 const mapStateToProps = (state) => ({
   inputValue: state.inputValue,
+  isAuthenticated: state.isAuthenticated,
 });
 
 const mapDispatchToProps = {
