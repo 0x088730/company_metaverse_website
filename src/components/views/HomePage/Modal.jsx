@@ -107,6 +107,7 @@ const Modal = ({ isOpen, closeModal, children, auth }) => {
                         focused
                         value={userPass}
                         onChange={getUserPass}
+                        type="password"
                         InputProps={{
                           style: { color: "white" },
                         }}

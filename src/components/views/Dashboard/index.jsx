@@ -1,7 +1,13 @@
+import LeftSideBar from './LeftSideBar';
+import RightSideBar from './RightSideBar';
+import './style.scss'
 const Dashboard = () => {
   return (
     <>
-      <h1>Ghost</h1>
+    <div className='dashboardflexbar'>
+      <LeftSideBar />
+      <RightSideBar />
+    </div>
     </>
   )
 }
