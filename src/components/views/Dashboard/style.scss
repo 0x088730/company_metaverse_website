@@ -52,5 +52,14 @@
 }
 
 .css-i4bv87-MuiSvgIcon-root {
-  color: white;
+  color: white!important;
+}
+
+.sidebarcontrol {
+  position: absolute;
+  right: -28px;
+  background: black;
+  margin-top: -20px;
+  border-radius: 7px;
+  padding: 4px;
 }
