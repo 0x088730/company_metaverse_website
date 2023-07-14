@@ -1,4 +1,3 @@
-import react, {useState} from 'react';
 import LeftSideBar from './LeftSideBar';
 import RightSideBar from './RightSideBar';
 import './style.scss'
