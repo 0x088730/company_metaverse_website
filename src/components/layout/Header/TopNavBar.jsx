@@ -1,11 +1,14 @@
 import "./style.scss";
 import { useState } from "react";
 import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
 import Logo from "../../../assets/image/Logos/logoIcon.png";
 import { openModal } from "../../../redux/actions/modalActions";
 
 const TopNavBar = ({openModal}) => {
+
+  const navigate = useNavigate();
 
   const [isResponsive, setIsResponsive] = useState(false);
 
@@ -14,9 +17,8 @@ const TopNavBar = ({openModal}) => {
   }
 
   const handleClick = (value) => {
-    console.log(value)
+    navigate("/")
   }
-
 
   return (
     <>

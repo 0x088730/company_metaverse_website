@@ -9,6 +9,17 @@
   justify-content: space-between;
 }
 
+.flexHeaderDash {
+  display: flex;
+  background-color: #4ca261;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 0.1rem solid #bc191a;
+  justify-content: space-between;
+}
+
 .header {
   display: flex;
   font-family: "Open Sans", sans-serif;

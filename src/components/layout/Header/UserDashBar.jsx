@@ -1,10 +1,10 @@
 import "./style.scss";
 import { useState } from "react";
-import { connect, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import AppsIcon from "@mui/icons-material/Apps";
+import { connect, useDispatch } from "react-redux";
 import { Auth } from "../../../redux/actions/userActions";
-import Logo from "../../../assets/image/Logos/logoIcon.png";
+import Logo from "../../../assets/image/Logos/Logo3.png";
 
 const UserDashBar = () => {
 
@@ -22,10 +22,11 @@ const UserDashBar = () => {
 
   const handleClick = (value) => {
     navigate("/");
+    console.log(value)
   };
 
   return (
-    <div className="flexHeader">
+    <div className="flexHeaderDash">
       <div className={`topnav ${isResponsive ? "responsive" : ""}`}>
         <button
           style={{
@@ -38,7 +39,7 @@ const UserDashBar = () => {
           className="logoPos"
           onClick={() => handleClick("logo")}
         >
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="" style={{width: '13rem'}}/>
         </button>
         <button
           style={{
