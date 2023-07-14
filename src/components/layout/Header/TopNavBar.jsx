@@ -1,5 +1,5 @@
 import "./style.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { connect } from "react-redux";
 import AppsIcon from "@mui/icons-material/Apps";
 import Logo from "../../../assets/image/Logos/logoIcon.png";
