@@ -14,7 +14,7 @@ const UserDashBar = () => {
   }
 
   const gotoRoot = () => {
-    dispatch({ type: 'LOGIN' });
+    dispatch({ type: 'LOGOUT' });
     navigate('/');
   }
   const handleClick = () => {
