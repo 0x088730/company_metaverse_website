@@ -1,14 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
+import TimeTrack from './TimeTrack'
 
-const RightSidebar = ({buttonValue}) => {
-
+const RightSidebar = () => {
+  const dashboardStatus = useSelector((state) => state.dashboard.dashboardStatus);
   return (
     <div className='right-sidebar'>
-      <h1>Ghost: {buttonValue }</h1>
+      <div>
+        <h1>{dashboardStatus}</h1>
+      </div>
+      {
+        dashboardStatus === "TimeSheet" ? <TimeTrack /> : null
+      }
     </div>
   );
 };
 
 
-export default connect(null, null)(RightSidebar);
+export default RightSidebar;

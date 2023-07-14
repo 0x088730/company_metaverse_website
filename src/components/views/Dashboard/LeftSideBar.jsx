@@ -15,7 +15,6 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import FormatIndentIncreaseIcon from '@mui/icons-material/FormatIndentIncrease';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import TimeSheetIcon from '@mui/icons-material/AccessTime';
-import { insertDashboardStatus } from '../../../redux/actions/dashboardActions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LeftSidebar = ({onButtonClick}) => {
+const LeftSidebar = () => {
   const [expanded, setExpanded] = useState(false);
   const classes = useStyles();
   const dispatch = useDispatch();
@@ -41,9 +40,7 @@ const LeftSidebar = ({onButtonClick}) => {
   };
 
   const handleButtonClick = (value) => {
-    console.log(value)
-    onButtonClick(value);
-    dispatch(insertDashboardStatus(value));
+    dispatch({type: "DASHBOARDACTION", payload: value})
   }
 
   return (
@@ -60,7 +57,7 @@ const LeftSidebar = ({onButtonClick}) => {
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
-        <ListItem button onClick={() => handleButtonClick("Time Tracking")}>
+        <ListItem button onClick={() => handleButtonClick("TimeSheet")}>
           <ListItemIcon>
             <TimeSheetIcon />
           </ListItemIcon>

@@ -1,0 +1,18 @@
+.addTime {
+  display: flex;
+  padding: 10px;
+  // background: gray;
+}
+
+.activitiyCell {
+  background: rebeccapurple;
+  text-align: center;
+  border-radius: 7px;
+  color: white;
+}
+
+.actionTimeTrack {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}

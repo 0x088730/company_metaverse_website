@@ -3,7 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import HomeContainer from './components/views/HomePage';
-import Dashboard from './components/views/Dashboard'
+import Dashboard from './components/views/Dashboard';
+import TimeTrack from './components/views/Dashboard/TimeTrack';
 
 const RouterComponent = () => (
   <Router>
@@ -14,10 +15,10 @@ const RouterComponent = () => (
           <Routes>
             <Route path="/" element={<HomeContainer />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/timetrack" element={<TimeTrack/>} />
           </Routes>
         </div>
       </main>
-      {/* <Footer /> */}
     </div>
   </Router>
 );

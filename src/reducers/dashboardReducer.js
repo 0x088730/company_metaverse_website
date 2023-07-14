@@ -1,4 +1,3 @@
-import { DASHBOARDACTION } from '../redux/actions/dashboardActions';
 
 const initialState = {
   dashboardStatus: "",
@@ -6,7 +5,7 @@ const initialState = {
 
 const dashboardReducer = (state = initialState, action) => {
   switch (action.type) {
-    case DASHBOARDACTION:
+    case "DASHBOARDACTION":
       return {
         ...state,
         dashboardStatus: action.payload,
